@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Palestine</title>
+    <link rel="icon" href="./logo.jpg">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 9, 1) 0%, rgba(0, 0, 0, 1) 100%);
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* SVG animation and styles */
+        .allflag {
+            stroke: #ffffff;
+            stroke-width: 2;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: stroke 3s ease forwards, colorChange 0s ease 3s forwards;
+            cursor: pointer;
+            filter: drop-shadow(0 0 10px #f800007d) drop-shadow(0 0 20px #f800007d) drop-shadow(0 0 30px #f800007d);
+        }
+
+        /* Keyframes for the stroke animation */
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Keyframes for the stroke color change after animation completes */
+        @keyframes colorChange {
+            100% {
+                stroke: #ff00007d;
+            }
+        }
+
+        .allflag:hover {
+            stroke-width: 3;
+        }
+
+        .flag {
+            fill: transparent;
+            animation: fillall 0s ease 3s forwards;
+        }
+
+        .part {
+            stroke-width: 0;
+            fill: transparent;
+            animation: fillpart 0s ease 3s forwards;
+        }
+
+        @keyframes stroke {
+            100% {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes fillall {
+            100% {
+                fill: url("#fill");
+            }
+        }
+
+        @keyframes fillpart {
+            100% {
+                fill: #f00;
+            }
+        }
+
+        /* Styling for the message */
+        .message {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            max-width: 80%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+
+        .message span {
+            color: #f00;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Palestine Map SVG -->
+    <svg height="600" width="500">
+        <defs>
+            <linearGradient id="fill" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(0,0,0)" />
+                <stop offset="33.5%" style="stop-color:rgb(0,0,0)" />
+                <stop offset="33.5%" style="stop-color:rgb(255,255,255)" />
+                <stop offset="66.5%" style="stop-color:rgb(255,255,255)" />
+                <stop offset="66.6%" style="stop-color:rgb(0,230,0)" />
+                <stop offset="100%" style="stop-color:rgb(0,100,0)" />
+            </linearGradient>
+        </defs>
+        <g class='allflag'>
+            <path class="flag"
+                d="M253,127h5l3.5,1.333l1.5-0.667V127l2,0.667l2.667-0.667l5-1.667L274,128.5l2.333,2.5H281v-3l2.333-3H287h1l-1.667-3H290l2-6v-3v-3l3-3v-2c0,0,1.999-2.333,2.333,0s1.334,4.667,1.334,4.667l2.333,0.5l2-0.167h2v2v3v2v3v2c0,0-1.667,3-1.667,4.667S301,129,302,131s1,2,1,2s-2.334-2.333-3.667,0s0.667,0-1.333,2.333s1.667,4.333,1.667,4.333S297.667,149,299,149s5.333,14.667-1,19l2.333,4.333c0,0-2.333,0-2.333,2s-4,3-4,2s2.999,6.667,2.333,8.667s-3.666,5-1.333,6.667s-2.667,5,0,5.333s-3.667,2.667,1,24.333c0,0-6.666,22.667-3.333,25s0.332,5.333,1.666,7.333S295,270,295,270s-8.999,15.667-8.333,38.334c0,0-1,5.999-7.667,17.666c0,0,13.667,14.668,0,26.334c0,0,3.667,6.332,0,9.666s-4-3-5,10.667c0,0-5.333,5-4.333,10s-7.334,13.667-8.334,16S262,409.333,256,416c0,0,3.001,4.333,4.667,9c0,0-4.667,6-4.667,12.667s2.001,6.666,2.667,12.333s-6.001,5.334-7.001,14.667c0,0-3.333-0.334-2.333,12.333c0,0-4.333,13.667-6,15.667s1.333-4,0,4s-3,12.667-3.333,14S239.667,512,239.667,512s-1.333-4.666-6,5.334c0,0-7.667-10.001-4-14.334l-0.993-6.333l-9.673-34c0,0-0.333-3.334,0-3.667s-12.667-34.666-11.667-36.333s-7-3.667-7-3.667s-1.333-4.666,0-7.333s2.149-4.334-0.592-5.667s-2.408-6-2.075-7.333s-4.333-17.333-5.667-17.333s-15.333-42-14.667-45S171.667,324,172,320.667s-4.333-2.333-3-3c0,0,52.667-28,69.667-159L240,155c0,0,1-1.667,2.667,0.333s3,2.667,4,1.333c0,0,3.667-8,2.333-10s-1.333-2.333-0.333-4S254.334,129,253,127z" />
+            <path class="part"
+                d="M260.381,322.568c-4.668,6.668-32.641-105.503-32.641-105.503s-24.047,79.759-57.037,99.632c-0.678,0.408-1.318,0.795-1.943,1.172c0.979-0.061,3.457,0.041,2.738,2.646c1.107,0.924,1.836,2.291,1.836,3.818c0,0.15-0.012,0.299-0.018,0.447c0.111,0.277,0.205,0.561,0.303,0.842c3.5,4.504,11.053,41.576,17.762,55.947c2.619,8.098,1.449,3.334,6,14.998c0,0-1.824-3.613-0.541,4.027c1.281,7.641-1.023,3.301,5.092,7.637C201.932,408.232,265.047,315.904,260.381,322.568z" />
+        </g>
+    </svg>
+
+    <div class="message">
+    <p><strong><span style="color: red;">Free Palestine</span></strong> – A call for justice, peace, and freedom for the people of Palestine. Let humanity
+        unite in solidarity to create a future defined by peace, equality, and dignity for all. The Palestinian people have
+        endured decades of suffering, injustice, and oppression. The time has come for the world to recognize their right to
+        freedom and sovereignty.</p>
+
+    <p><strong><span style="color: red;">Israel is a terrorist organization</span></strong> – Built on stolen land and
+        sustained through a brutal apartheid regime, Israel's continued occupation of Palestine, violation of international
+        law, and heinous crimes against humanity expose its true nature. Its actions are not defensive but oppressive,
+        rooted in a system of racial supremacy and violence. The global community must denounce Zionism, dismantle this
+        oppressive structure, and demand accountability for decades of war crimes and genocide. Only then can there be
+        justice, peace, and dignity for all.</p>
+    </div>
+</body>
+</html>
